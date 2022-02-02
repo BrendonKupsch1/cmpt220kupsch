@@ -1,3 +1,4 @@
+
 //Brendon Kupsch 
 public class Problems
 {
@@ -21,5 +22,6 @@ public class Problems
         //Problem 4 
         int power = (5/2);
         int rem = (5%2);
+        System.out.println("the binary of 5 is " + (5/4) + power )
     }
 }
