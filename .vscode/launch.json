@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Problem1",
+            "request": "launch",
+            "mainClass": "Problem1",
+            "projectName": "cmpt220kupsch_dbde5211"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
