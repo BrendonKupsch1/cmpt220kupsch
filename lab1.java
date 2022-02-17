@@ -55,7 +55,7 @@ public class lab1
         rem %= 100;
         flip += rem/10 *1000;
         System.out.print(flip);
-        
+        input.close();
     }
     
 }

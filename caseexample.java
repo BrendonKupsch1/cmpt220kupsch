@@ -23,5 +23,6 @@ public class caseexample
             case 10: System.out.println("horse"); break;
             case 11: System.out.println("sheep"); break;
         }
+        input.close();
     }
 }

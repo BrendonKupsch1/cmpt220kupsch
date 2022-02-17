@@ -24,12 +24,12 @@ public class Problem1
         if (disc == 0)
         {
             double root1 = ((-b + Math.pow(disc, .5)) / (2 *a));
-            double root2 = ((-b - Math.pow(disc, .5)) / (2 *a));
             System.out.println("The equation has one root, " + root1 + ".");
         }
         if (disc < 0)
         {
             System.out.println("The equation has no real roots.");
         }
+        input.close();
     }
 }
