@@ -27,6 +27,6 @@ public class Problem2
             }
 
         }
-
+        input.close();
     }
 }

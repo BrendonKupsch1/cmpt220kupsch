@@ -48,5 +48,6 @@ public class Problem3
         {
             System.out.println("The line equation for the two points (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 + ") is y = " + m + "x + " + b + ".");
         }
+        input.close();
     }
 }
