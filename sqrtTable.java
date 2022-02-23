@@ -4,6 +4,8 @@ public class sqrtTable
     {
         int count = 0;
         System.out.printf("%-10s%-10s", "Number", "SquareRoot");
+        System.out.println();
+        System.out.println("-------------------");
         while(count < 21)
         {
             System.out.println();
