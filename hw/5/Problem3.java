@@ -11,6 +11,7 @@ public class Problem3
         System.out.println("Enter a phrase to capitalize each word of it: ");
         String phrase = input.nextLine();
         System.out.println(title(phrase));
+        input.close();
     }
     public static String title(String s)
     {  

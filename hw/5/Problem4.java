@@ -11,6 +11,7 @@ public class Problem4
         System.out.println("Enter total seconds: ");
         long seconds = input.nextLong();
         System.out.println(format(seconds));
+        input.close();
     }
     public static String format(long seconds)
     {

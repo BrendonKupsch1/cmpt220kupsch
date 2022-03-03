@@ -11,6 +11,7 @@ public class Problem2
         System.out.println("Enter a decimal number to convert it to binary: ");
         int decimal = input.nextInt();
         System.out.println(decimalToBinary(decimal));
+        input.close();
     }
     // take % 2, if 0 then even, take % of 2 and divide by 2 till you run out of numbers 
     public static String decimalToBinary(int value)

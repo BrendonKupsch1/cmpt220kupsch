@@ -11,6 +11,7 @@ public class Problem1
         System.out.println("Enter a number for the product of each digit: ");
         long userNumber = input.nextLong();
         System.out.println(multiplyDigits(userNumber));
+        input.close();
     }
     public static int multiplyDigits(long n)
     {
@@ -22,4 +23,5 @@ public class Problem1
         }
        return (int)product;
     }
+    
 }
