@@ -9,18 +9,19 @@ public class Problem3
     {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a phrase to capitalize each word of it: ");
-        String phrase = input.next();
+        String phrase = input.nextLine();
         System.out.println(title(phrase));
     }
     public static String title(String s)
-    {
-        String words[]=s.split("\\s");  
-        String capitalizeWord="";  
-        for(String w:words){  
+    {  
+        String words[] = s.split("\\s");  
+        String title="";  
+        for(String w:words)
+        {  
             String first=w.substring(0,1);  
             String afterfirst=w.substring(1);  
-            capitalizeWord+=first.toUpperCase()+afterfirst+" ";  
+            title+=first.toUpperCase()+afterfirst+" ";  
         }  
-        return capitalizeWord.trim();  
+        return title.trim();
     }
 }
