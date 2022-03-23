@@ -13,6 +13,7 @@ public class Problem4
         System.out.println(format(seconds));
         input.close();
     }
+    // JA: It's a clock. The maximum hours should be 24
     public static String format(long seconds)
     {
         long min = (seconds / 60);

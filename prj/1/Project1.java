@@ -1,7 +1,8 @@
 //Brendon Kupsch
 //CMPT_220L_202
 //Prof. Arias
-//Project 1 
+//Project 1
+// JA: What does this program do?
 import java.util.Scanner;
 public class Project1 
 {
