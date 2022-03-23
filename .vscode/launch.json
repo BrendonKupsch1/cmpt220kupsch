@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "cmpt220kupsch_dbde5211"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "cmpt220kupsch_dbde5211"
+        },
+        {
+            "type": "java",
             "name": "Launch Problem1",
             "request": "launch",
             "mainClass": "Problem1",
