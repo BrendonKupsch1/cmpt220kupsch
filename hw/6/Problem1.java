@@ -1,5 +1,6 @@
 import java.util.Random;
 
+// JA: THis is not what the problem asked
 public class Problem1 
 {
     public static void main(String[] args)
