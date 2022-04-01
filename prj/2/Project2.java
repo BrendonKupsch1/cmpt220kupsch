@@ -19,6 +19,7 @@ public class Project2
         intArray[i] = input.nextInt();
       }
       String Solution = Arrays.toString(modulo42(intArray));
+      // JA: You had to give the count of distinct numbers
       System.out.println("Your numbers modolu 42 are " + Solution + ".");
     }
     // mod 42 calculation method 
