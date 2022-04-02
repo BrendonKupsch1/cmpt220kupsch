@@ -1,4 +1,5 @@
 import java.util.Scanner;
+// JA: This is not what the problem asked for
 public class Problem3 
 {
     public static void main(String[] args)
