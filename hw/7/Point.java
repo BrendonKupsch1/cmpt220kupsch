@@ -1,3 +1,4 @@
+// JA: This class should only represent a point (x,y).
 public class Point 
 {
     private double a;

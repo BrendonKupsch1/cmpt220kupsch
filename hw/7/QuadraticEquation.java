@@ -1,3 +1,4 @@
+//JA: Where is the UML diagram?
 public class QuadraticEquation 
 {
 	private double a;
