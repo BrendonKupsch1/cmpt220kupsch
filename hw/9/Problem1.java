@@ -10,7 +10,8 @@ public class Problem1
 		Scanner input = new Scanner(System.in);
 		int[] array = getArray();
 		System.out.print("Enter the index of the array: ");
-		try {
+		try 
+		{
 			System.out.println("The corresponding element value is " + array[input.nextInt()]);
 		}
 		catch (ArrayIndexOutOfBoundsException ex) 
