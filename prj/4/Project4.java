@@ -29,7 +29,7 @@ public class Project4
             char gender = input.nextLine().charAt(0);
             System.out.println("Enter the name: ");
             String name = input.nextLine();
-            BabyName babyName;
+            BabyName babyName = null;
             ArrayList<BabyName> tmpRef;
             if(gender == 'M')
                 tmpRef = maleBabyNames;
