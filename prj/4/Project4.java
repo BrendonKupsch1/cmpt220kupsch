@@ -29,14 +29,23 @@ public class Project4
             char gender = input.nextLine().charAt(0);
             System.out.println("Enter the name: ");
             String name = input.nextLine();
-
-            //TODO code to find name in list
+            BabyName babyName;
+            ArrayList<BabyName> tmpRef;
+            if(gender == 'M')
+                tmpRef = maleBabyNames;
+            else if(gender == 'F')
+                tmpRef = femableBabyNames;
+            else 
+                throw new GenderException(gender + " is not a proper gender");
+            for(BabyName BN : tmpRef)
+                if(BN.getName().equals(name) && BN.getYear() == year)
+                    babyName = BN;
 
             // if the name isnt found
             if (babyName != null)
                 System.out.println(babyName);
             else
-                System.out.printf("The name %s is not ranked in year %d\n",name,year):
+                System.out.printf("The name %s is not ranked in year %d\n",name,year);
         }
     }
 
@@ -89,7 +98,8 @@ public class Project4
         ArrayList<BabyName> names = new ArrayList<>();
         File file = new File(fileName);
         Scanner input = new Scanner(file);
-        int year = Integer.parseInt(fileName.substring(fileName.indexOf("20"), fileName.indexOf("20") + while(input.hasNext())
+        int year = Integer.parseInt(fileName.substring(fileName.indexOf("20"), fileName.indexOf("20") + fileName.indexOf("20")));
+        while(input.hasNext())
         {
             int ranking = input.nextInt();
             String name = input.next();
@@ -135,7 +145,7 @@ class BabyName
         this.name = name;
     }
 
-    public String getRanking()
+    public int getRanking()
     {
         return ranking;
     }
@@ -145,7 +155,7 @@ class BabyName
         this.ranking = ranking;
     }
 
-    public String getGender()
+    public char getGender()
     {
         return gender;
     }
@@ -169,5 +179,12 @@ class BabyName
     public String toString()
     {
         return name + " is ranked #" + ranking + " for year " + year;
+    }
+}
+class GenderException extends IllegalArgumentException 
+{
+    GenderException(String s) 
+    {
+        super(s);
     }
 }
