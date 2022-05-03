@@ -5,7 +5,8 @@
 import java.util.Scanner;
 public class Problem1 
 {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Time time1 = new Time(1194314);
         Time time2 = new Time(93889345);
         System.out.println("Enter time1 (hour minute second): 331 34 674");
@@ -19,7 +20,8 @@ public class Problem1
     }
 }
 
-class Time {
+class Time 
+{
     private int mHour;
     private int mMinute;
     private int mSecond;
@@ -30,7 +32,8 @@ class Time {
         mTime = System.currentTimeMillis();
     }
 
-    public Time(long time) {
+    public Time(long time) 
+    {
         mTime = time;
     }
     public Time(int hour, int minute, int second) 
