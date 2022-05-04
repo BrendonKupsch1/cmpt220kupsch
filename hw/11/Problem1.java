@@ -1,9 +1,10 @@
-import java.util.Scanner;
-
 //Brendon Kupsch
 //CMPT_220L_202
 //Prof. Arias
 //HW 11 Problem 1
+
+import java.util.Scanner;
+
 public class Problem1
 {
     public static void main(String[] args)
