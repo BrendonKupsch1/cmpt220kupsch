@@ -42,12 +42,30 @@ abstract class Animal
         this.weight = weight;
     }
 
-    public abstract String sound();
-
-    public Animal clone() 
+    public Object clone()
     {
-        return clone();
+        try
+        {
+            Object clone = super.clone();
+            return clone;
+        } catch (CloneNotSupportedException ex)
+        {
+            ex.printStacktrace();
+        }
+        return null;
     }
+
+    @Override
+    public int compareTo(Animal o)
+    {
+        if (weight - o.weight < 0)
+            return -1;
+        if (weight - o.weight > 0)
+            return 1;
+        return 0;
+    }
+
+    public abstract String sound();
 
     public double compareTo()
     {

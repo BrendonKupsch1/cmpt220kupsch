@@ -5,16 +5,26 @@
 
 import java.util.Scanner;
 
-public class Rational extends Number implements Comparable<Rational> 
+public class Problem3
 {
   public static void main(String[] args)
   {
     Scanner input = new Scanner(System.in);
+
     System.out.println("Enter the first rational number: ");
-    String rational1 = input.nextLine();
+    String num1 = input.nextLine();
     System.out.println("Enter the second rational number: ");
-    String rational2 = input.nextLine();
+    String num2 = input.nextLine();
+
+    Rational rational1 = Rational.parseRationalNumber(num1);
+    Rational rational2 = Rational.parseRationalNumber(num2);
+    System.out.println(rational1 + " + " + rational2 + " = " + rational1.add(rational2));
   }
+}
+
+class Rational extends Number implements Comparable<Rational> 
+{
+
     // Data fields for numerator and denominator
     private long numerator = 0;
     private long denominator = 1;
@@ -129,5 +139,16 @@ public class Rational extends Number implements Comparable<Rational>
         return -1;
       else
         return 0;
+    }
+
+    // Parse Rational
+    public static Rational parseRationalNumber(String s)
+    {
+      String[] split = s.split("/");
+      long numerator = Long.parseLong(split[0].trim());
+      long denominator = 1;
+      if (split.length > 1)
+        denominator = Long.parseLong(split[1].trim());
+      return new Rational(numerator, denominator);
     }
 }
