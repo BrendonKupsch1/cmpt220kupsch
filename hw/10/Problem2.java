@@ -21,8 +21,9 @@ public class Problem2
         list[3].setWeight(7.5);
         list[4] = (Animal)(list[1].clone());
         java.util.Arrays.sort(list);
-        for (int i = 0; i < list.length; i++) {
-        System.out.println("weight: " + list[i].getWeight());
+        for (int i = 0; i < list.length; i++) 
+        {
+            System.out.println("weight: " + list[i].getWeight());
         }
     }            
 }
