@@ -28,7 +28,7 @@ public class Problem2
     }            
 }
 
-abstract class Animal
+abstract class Animal implements Comparable<Animal>
 {
     private double weight;
 
@@ -50,7 +50,7 @@ abstract class Animal
             return clone;
         } catch (CloneNotSupportedException ex)
         {
-            ex.printStacktrace();
+            ex.printStackTrace();
         }
         return null;
     }
@@ -71,7 +71,7 @@ abstract class Animal
     {
         return weight - weight;
     }
-
+}
 class Chicken extends Animal
 {
     public String howToEat()
@@ -93,5 +93,4 @@ class Tiger extends Animal
     {
         return "Tiger: RROOAARR";
     }
-}
 }
