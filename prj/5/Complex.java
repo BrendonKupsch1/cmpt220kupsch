@@ -3,73 +3,113 @@
 //Prof. Arias
 //Project 5 Complex Class
 
-public class Complex implements Cloneable
+public class Complex implements Cloneable, Comparable<Complex>
 {
-    private double real;
-    private double imaginary;
+    // private instance of real and imaginary 
+    private double a;
+    private double b;
 
-    public Complex(double real, double imaginary)
+    // method to set all the corresponding instance variables
+    public Complex(double a, double b)
     {
-        this.real = real;
-        this.imaginary = imaginary;
+        this.a = a;
+        this.b = b;
     }
 
-    public Complex(Complex aComplex)
-    {   
-        this.real = aComplex.real;
-        this.imaginary = aComplex.imaginary;
-    }
-
+    // method to set all instance variables to 0
     public Complex()
     {
-        real = 0.0;
-        imaginary = 0.0;
+        a = 0.0;
+        b = 0.0;
     }
 
+    // method to set all instance variables to the passed object
+    public Complex(Complex aComplex)
+    {   
+        this.a = aComplex.a;
+        this.b = aComplex.b;
+    }
+
+    // methods to get and set instance variables individually 
     public double getRealPart()
     {
-        return real;
+        return a;
     }
-
     public double getImaginaryPart()
     {
-        return imaginary;
+        return b;
     }
 
+    // addition method 
     public Complex add(Complex complex)
     {
-        return new Complex(this.real + complex.real, this.imaginary + complex.imaginary);
+        return new Complex(this.a + complex.a, this.b + complex.b);
     }
 
+    // subtraction method 
     public Complex subtract(Complex complex)
     {
-        return new Complex(this.real - complex.real, this.imaginary - complex.imaginary);
+        return new Complex(this.a - complex.a, this.b - complex.b);
     }
 
-    public Complex multiple(Complex c1)
+    // multiplication method
+    public Complex multiply(Complex c1)
     {
-        double real = c1.real * this.real - c1.imaginary * imaginary;
-        double imaginary = c1.real * this.imaginary + c1.imaginary * this.real;
-        return new Complex(real, imaginary);
+        double a = c1.a * this.a - c1.b * b;
+        double b = c1.a * this.b + c1.b * this.a;
+        return new Complex(a, b);
     }
 
+    // division method 
+    public Complex divide(Complex c1)
+    {
+        Complex a = this;
+        return a.multiply(c1.reciprocal());
+    }
+
+    // reciprocal method for division
     public Complex reciprocal()
     {
-        double scale = real * real + imaginary * imaginary;
-        return new Complex(real / scale, -imaginary / scale);
+        double scale = a * a + b * b;
+        return new Complex(a / scale, -b / scale);
     }
 
+    // absolute value method 
     public double abs()
     {
-        return Math.sqrt(real * real + imaginary * imaginary);
+        return Math.sqrt(a * a + b * b);
     }
 
+    // method to return string representing complex number 
     @Override
     public String toString()
     {
-        if (imaginary < 0)
-            return "" + String.format("%.2f", real) + " -" + String.format("%.2f", Math.abs(imaginary)) + "i";
+        if (b < 0)
+            return "" + String.format("%.2f", a) + " -" + String.format("%.2f", Math.abs(b)) + "i";
         else
-            return "" + String.format("%.2f", real) + " +" + String.format("%.2f", Math.abs(imaginary)) + "i";
+            return "" + String.format("%.2f", a) + " +" + String.format("%.2f", Math.abs(b)) + "i";
+    }
+
+    // cloneable interface method
+    @Override
+    public Complex clone()
+    {
+        return new Complex(this);
+    }
+
+    // comparable interface method 
+    @Override
+    public int compareTo(Complex o)
+    {
+        double v1;
+        double v2;
+
+        v1 = Math.pow(this.a, 2) + Math.pow(this.b, 2);
+        v2 = Math.pow(o.a, 2) + Math.pow(o.b, 2);
+        if(v1 > v2)
+            return 1;
+        if (v2 > v1)
+            return -1;
+        return 0;
     }
 }
