@@ -91,7 +91,7 @@ public class Complex implements Cloneable, Comparable<Complex>
         Complex z2c = z2.conjugate();
         Complex z3c = z3.conjugate();
         Complex i = new Complex(4, 0);
-        return (z1.multiply(z2c).subtract(z1.multiply(z3c)).subtract(z1c.multiply(z2)).add(z1c.multiply(z3)).add(z2.multiply(z3c)).subtract(z2c.multiply(z3))).divide(i);
+        return (z1.multiply(z2c)).subtract((z1.multiply(z3c))).subtract((z1c.multiply(z2))).add((z1c.multiply(z3))).add((z2.multiply(z3c))).subtract((z2c.multiply(z3))).divide(new Complex(4,0)).multiply(new Complex(0,1));
     }
 
     // method to return string representing complex number 
