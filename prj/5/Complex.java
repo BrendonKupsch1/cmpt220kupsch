@@ -80,6 +80,20 @@ public class Complex implements Cloneable, Comparable<Complex>
         return Math.sqrt(a * a + b * b);
     }
 
+    public Complex conjugate()
+    {
+        return new Complex(this.a, this.b * -1);
+    }
+
+    public static Complex area(Complex z1, Complex z2, Complex z3)
+    {
+        Complex z1c = z1.conjugate();
+        Complex z2c = z2.conjugate();
+        Complex z3c = z3.conjugate();
+        Complex i = new Complex(4, 0);
+        return (z1.multiply(z2c).subtract(z1.multiply(z3c)).subtract(z1c.multiply(z2)).add(z1c.multiply(z3)).add(z2.multiply(z3c)).subtract(z2c.multiply(z3))).divide(i);
+    }
+
     // method to return string representing complex number 
     @Override
     public String toString()
