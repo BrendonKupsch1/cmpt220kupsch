@@ -3,7 +3,7 @@
 //Prof. Arias
 //Project 5 Complex Class
 
-public class Complex implements Cloneable, Comparable<Complex>
+public class Complex extends Number implements Cloneable, Comparable<Complex>
 {
     // private instance of real and imaginary 
     private double a;
@@ -124,6 +124,30 @@ public class Complex implements Cloneable, Comparable<Complex>
             return 1;
         if (v2 > v1)
             return -1;
+        return 0;
+    }
+
+    @Override
+    public int intValue() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public long longValue() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public float floatValue() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public double doubleValue() {
+        // TODO Auto-generated method stub
         return 0;
     }
 }

@@ -17,6 +17,7 @@ public class Extra
         Complex z2 = new Complex(input.nextDouble(), input.nextDouble());
         System.out.println("Enter the values for x3, y3 = ");
         Complex z3 = new Complex(input.nextDouble(), input.nextDouble());
+        // JA: Area is a single value. You should return the real part.
         System.out.println(Complex.area(z1, z2, z3));
     }
 }

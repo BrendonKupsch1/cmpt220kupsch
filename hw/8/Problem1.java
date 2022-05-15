@@ -14,7 +14,7 @@ public class Problem1
         Vector<String> substr_list = new Vector<String>();
         for (int i = 0; i < 1; i++)
         {
-            if (s.charAt(i) != delimiters)
+            if (s.charAt(i) != delimiters) // JA: Cannot compare char to String
             {
                 word = word + s.charAt(i);
             }
